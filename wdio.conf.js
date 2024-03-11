@@ -1,6 +1,5 @@
 const projectPath = require("path");
 const androidAppPath = projectPath.join(process.cwd(), "app/android/Android-MyDemoAppRN.1.1.0.build-266.apk");
-const iosAppPath = projectPath.join(process.cwd(), "app/ios/MyRNDemoApp.app");
 
 export const config = {
   //
