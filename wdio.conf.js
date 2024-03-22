@@ -1,5 +1,5 @@
-const projectPath = require("path");
-const androidAppPath = projectPath.join(process.cwd(), "app/android/Android-MyDemoAppRN.1.1.0.build-266.apk");
+import projectPath from "path";
+//const androidAppPath = projectPath.join(process.cwd(), "app/android/Android-MyDemoAppRN.1.1.0.build-266.apk");
 
 export const config = {
   //
@@ -8,7 +8,7 @@ export const config = {
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  port: 4723,
+  port: 4724,
   //
   // ==================
   // Specify Test Files
@@ -26,6 +26,7 @@ export const config = {
   //
   specs: [
     // ToDo: define location for spec files here
+    "./test/specs/**/*.js",
   ],
   // Patterns to exclude.
   exclude: [
@@ -55,12 +56,11 @@ export const config = {
   //
   capabilities: [
     {
-      // capabilities for local Appium web tests on an Android Emulator
       platformName: "Android",
       "appium:deviceName": "Android Test Emuloator",
       "appium:platformVersion": "14.0",
       "appium:automationName": "UiAutomator2",
-      "appium:app": androidAppPath,
+      "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/android/Android-MyDemoAppRN.1.1.0.build-226.apk",
     },
   ],
 
@@ -95,7 +95,7 @@ export const config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  // baseUrl: 'http://localhost:8080',
+  // baseUrl: "http://localhost",
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
