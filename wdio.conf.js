@@ -8,7 +8,7 @@ export const config = {
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  port: 4724,
+  port: 4723,
   //
   // ==================
   // Specify Test Files
@@ -48,7 +48,7 @@ export const config = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  maxInstances: 10,
+  maxInstances: 1,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -60,7 +60,9 @@ export const config = {
       "appium:deviceName": "Android Test Emuloator",
       "appium:platformVersion": "14.0",
       "appium:automationName": "UiAutomator2",
-      "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/android/Android-MyDemoAppRN.1.1.0.build-226.apk",
+      "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/android/Android-MyDemoAppRN.1.3.0.build-244.apk",
+      "appium:noReset": "false",
+      "appium:forceAppLaunch": "true",
     },
   ],
 

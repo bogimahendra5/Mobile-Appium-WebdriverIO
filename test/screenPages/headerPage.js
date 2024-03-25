@@ -10,9 +10,5 @@ class headerPage {
   get Chart() {
     return $('//android.view.ViewGroup[@content-desc="cart badge"]/android.widget.ImageView');
   }
-
-  async sideMenuBtn() {
-    await this.sideMenu().click();
-  }
 }
 export default new headerPage();

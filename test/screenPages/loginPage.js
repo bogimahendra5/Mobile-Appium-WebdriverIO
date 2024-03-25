@@ -1,6 +1,5 @@
-import menuPage from "./menuPage.js";
-
 class loginPage {
+  //* Button Action
   get loginTittle() {
     return $('(//android.widget.TextView[@text="Login"])[1]');
   }
@@ -14,12 +13,15 @@ class loginPage {
     return $("~Login button");
   }
 
+  //* Message Error
+  get errorMessage() {
+    return $('//android.widget.TextView[@text="Provided credentials do not match any user in this service."]');
+  }
+
   async loginStep(user, pass) {
-    await menuPage.loginMenuBtn();
     await this.username.setValue(user);
     await this.password.setValue(pass);
     await this.loginBtn.click();
-    await driver.pause(2000);
   }
 }
 export default new loginPage();

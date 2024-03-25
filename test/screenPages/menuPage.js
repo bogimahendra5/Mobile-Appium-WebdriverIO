@@ -6,14 +6,10 @@ class menuPage {
     return $("~menu item webview");
   }
   get loginMenu() {
-    return $('//android.widget.TextView[@text="Log In"]');
+    return $("~menu item log in");
   }
-  get logutMenu() {
-    return $('//android.widget.TextView[@text="Log Out"]');
-  }
-
-  async loginMenuBtn() {
-    await this.loginMenu.click();
+  get logoutMenu() {
+    return $("~menu item log out");
   }
 }
 
