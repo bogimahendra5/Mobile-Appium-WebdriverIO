@@ -1,4 +1,4 @@
-import projectPath from "path";
+//import projectPath from "path";
 //const androidAppPath = projectPath.join(process.cwd(), "app/android/Android-MyDemoAppRN.1.1.0.build-266.apk");
 
 export const config = {
