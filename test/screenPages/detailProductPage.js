@@ -1,5 +1,5 @@
 class detailProductPage {
-  get colourProduct() {
+  get colourRedProduct() {
     return $('//android.view.ViewGroup[@content-desc="red circle"]/android.view.ViewGroup');
   }
 
@@ -13,6 +13,12 @@ class detailProductPage {
 
   get counterMinusProduct() {
     return $('//android.view.ViewGroup[@content-desc="counter minus button"]/android.widget.ImageView');
+  }
+
+  async stepAddToCartProduct() {
+    await this.colourRedProduct.click();
+    await this.counterPlusProduct.click();
+    await this.addToCartBtn.click();
   }
 }
 export default new detailProductPage();

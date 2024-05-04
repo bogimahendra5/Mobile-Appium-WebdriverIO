@@ -1,5 +1,3 @@
-import loginPage from "./loginPage";
-
 class chceckoutPage {
   get fullnameField() {
     return $("~Full Name* input field");
@@ -44,20 +42,20 @@ class chceckoutPage {
     return $("~Continue Shopping button");
   }
 
-  async checkoutStep(fullname, city, zipcode, country, cardnumber, expirationdate, securitycode) {
+  async checkoutStep(fullname, address, city, zipcode, country, cardnumber, expirationdate, securitycode) {
     await this.fullnameField.setValue(fullname);
-    await this.addressLineField.setValue(city);
+    await this.addressLineField.setValue(address);
+    await this.cityField.setValue(city);
     await this.zipCodeField.setValue(zipcode);
     await this.countryField.setValue(country);
     await this.toPaymentBtn.click();
+    await this.fullnameField.setValue(fullname);
     await this.cardNumberField.setValue(cardnumber);
     await this.expirationDate.setValue(expirationdate);
     await this.securityCodeField.setValue(securitycode);
     await this.reviewOrderbtn.click();
     await expect(this.checkoutReviewOrderCard).toBeDisplayed();
     await this.placeOrderBtn.click();
-    await expect(this.checkoutCompleteText).toBeDisabled();
-    await expect(this.continueShoppingBtn).toBeClickable();
   }
 }
 

@@ -6,3 +6,4 @@ class cartPage {
     return $("~Proceed To Checkout button");
   }
 }
+export default new cartPage();
