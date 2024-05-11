@@ -2,11 +2,13 @@
   "name": "appium-wdio",
   "type": "module",
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.36.1",
     "@wdio/appium-service": "^8.33.1",
     "@wdio/cli": "^8.33.1",
     "@wdio/local-runner": "^8.33.1",
     "@wdio/mocha-framework": "^8.33.1",
     "@wdio/spec-reporter": "^8.32.4",
+    "allure-commandline": "^2.29.0",
     "appium-uiautomator2-driver": "^3.0.2",
     "ts-node": "^10.9.2"
   },
