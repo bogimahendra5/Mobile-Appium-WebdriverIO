@@ -13,6 +13,7 @@
     "ts-node": "^10.9.2"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdioandroid": "wdio run config/android.wdio.conf.js",
+    "wdioios": "wdio run config/ios.wdio.conf.js"
   }
 }

@@ -1,6 +1,6 @@
-import headerPage from "../screenPages/headerPage.js";
-import logoutPage from "../screenPages/logoutPage.js";
-import menuPage from "../screenPages/menuPage.js";
+import headerPage from "../../screenPages/android/headerPage.js";
+import logoutPage from "../../screenPages/android/logoutPage.js";
+import menuPage from "../../screenPages/android/menuPage.js";
 
 describe("Logout Scenario", async () => {
   beforeEach(async () => {

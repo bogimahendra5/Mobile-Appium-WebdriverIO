@@ -1,7 +1,7 @@
-import headerPage from "../screenPages/headerPage.js";
-import loginPage from "../screenPages/loginPage.js";
-import menuPage from "../screenPages/menuPage.js";
-import productPage from "../screenPages/productPage.js";
+import headerPage from "../../screenPages/android/headerPage.js";
+import loginPage from "../../screenPages/android/loginPage.js";
+import menuPage from "../../screenPages/android/menuPage.js";
+import productPage from "../../screenPages/android/productPage.js";
 
 describe("Login Scenario", async () => {
   beforeEach(async () => {

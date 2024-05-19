@@ -1,11 +1,11 @@
-import cartPage from "../screenPages/cartPage.js";
-import checkoutPage from "../screenPages/checkoutPage.js";
-import detailProductPage from "../screenPages/detailProductPage.js";
-import headerPage from "../screenPages/headerPage.js";
-import listProductPage from "../screenPages/listProductPage.js";
-import loginPage from "../screenPages/loginPage.js";
-import logoutPage from "../screenPages/logoutPage.js";
-import menuPage from "../screenPages/menuPage.js";
+import cartPage from "../../screenPages/android/cartPage.js";
+import checkoutPage from "../../screenPages/android/checkoutPage.js";
+import detailProductPage from "../../screenPages/android/detailProductPage.js";
+import headerPage from "../../screenPages/android/headerPage.js";
+import listProductPage from "../../screenPages/android/listProductPage.js";
+import loginPage from "../../screenPages/android/loginPage.js";
+import logoutPage from "../../screenPages/android/logoutPage.js";
+import menuPage from "../../screenPages/android/menuPage.js";
 
 describe("Checkout Sceanrio", () => {
   beforeEach(async () => {
