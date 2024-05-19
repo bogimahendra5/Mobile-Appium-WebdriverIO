@@ -57,11 +57,11 @@ export const config = {
   //
   capabilities: [
     {
-      platformName: "Android",
-      "appium:deviceName": "Android Test Emuloator",
-      "appium:platformVersion": "14.0",
-      "appium:automationName": "UiAutomator2",
-      "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/android/Android-MyDemoAppRN.1.3.0.build-244.apk",
+      platformName: "IOS",
+      "appium:deviceName": "iPhone 14 Pro",
+      "appium:platformVersion": "16.2",
+      "appium:automationName": "XCUItest",
+      "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/ios/MyRNDemoApp.app",
       "appium:noReset": "false",
       "appium:forceAppLaunch": "true",
     },
