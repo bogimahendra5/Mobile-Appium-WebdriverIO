@@ -1,6 +1,6 @@
-class headerPage {
-  get sideMenu() {
-    return $('//android.view.ViewGroup[@content-desc="open menu"]/android.widget.ImageView');
+class tabBarMenuPage {
+  get Menu() {
+    return $("~tab bar option menu");
   }
   get tittleHeader() {
     return $(
@@ -11,4 +11,4 @@ class headerPage {
     return $('//android.view.ViewGroup[@content-desc="cart badge"]/android.widget.ImageView');
   }
 }
-export default new headerPage();
+export default new tabBarMenuPage();

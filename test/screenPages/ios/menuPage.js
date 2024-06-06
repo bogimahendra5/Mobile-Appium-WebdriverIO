@@ -1,6 +1,6 @@
 class menuPage {
   get catalogMenu() {
-    return $("~menu item catalog");
+    return $("~tab bar option catalog");
   }
   get webviewMenu() {
     return $("~menu item webview");

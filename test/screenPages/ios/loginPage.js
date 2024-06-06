@@ -1,10 +1,10 @@
 class loginPage {
   //* Button Action
   get loginTittle() {
-    return $('(//android.widget.TextView[@text="Login"])[1]');
+    return $('//XCUIElementTypeStaticText[@name="Login"]');
   }
   get username() {
-    return $('//android.widget.EditText[@content-desc="Username input field"]');
+    return $("~Username input field");
   }
   get password() {
     return $("~Password input field");
@@ -15,7 +15,7 @@ class loginPage {
 
   //* Message Error
   get errorMessage() {
-    return $('//android.widget.TextView[@text="Provided credentials do not match any user in this service."]');
+    return $('//XCUIElementTypeStaticText[@name="Provided credentials do not match any user in this service."]');
   }
 
   async loginStep(user, pass) {

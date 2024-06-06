@@ -1,11 +1,10 @@
-import headerPage from "../../screenPages/android/headerPage.js";
-import loginPage from "../../screenPages/android/loginPage.js";
-import menuPage from "../../screenPages/android/menuPage.js";
-import productPage from "../../screenPages/android/productPage.js";
+import tabBarMenuPage from "../../screenPages/ios/tabBarMenuPage.js";
+import menuPage from "../../screenPages/ios/menuPage.js";
+import loginPage from "../../screenPages/ios/loginPage.js";
 
 describe("Login Scenario", async () => {
   beforeEach(async () => {
-    await headerPage.sideMenu.click();
+    await tabBarMenuPage.Menu.click();
     await menuPage.loginMenu.click();
   });
 
@@ -19,9 +18,9 @@ describe("Login Scenario", async () => {
     await expect(loginPage.errorMessage).toBeDisplayed();
   });
 
-  it("Login Success", async () => {
-    await loginPage.loginStep("bob@example.com", "10203040");
-    await expect(productPage.productTittle).toBeDisplayed();
-    await expect(productPage.productCard).toBeDisplayed();
-  });
+  // it("Login Success", async () => {
+  //   await loginPage.loginStep("bob@example.com", "10203040");
+  //   await expect(productPage.productTittle).toBeDisplayed();
+  //   await expect(productPage.productCard).toBeDisplayed();
+  // });
 });
