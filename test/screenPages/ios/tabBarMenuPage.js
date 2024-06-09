@@ -2,13 +2,11 @@ class tabBarMenuPage {
   get Menu() {
     return $("~tab bar option menu");
   }
-  get tittleHeader() {
-    return $(
-      '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]'
-    );
+  get Catalog() {
+    return $("~tab bar option catalog");
   }
   get Cart() {
-    return $('//android.view.ViewGroup[@content-desc="cart badge"]/android.widget.ImageView');
+    return $("~tab bar option cart");
   }
 }
 export default new tabBarMenuPage();

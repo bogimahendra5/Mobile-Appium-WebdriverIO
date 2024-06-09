@@ -1,15 +1,18 @@
 class logoutPage {
   // Button
   get logoutConfirmBtn() {
-    return $('//android.widget.Button[@resource-id="android:id/button1"]');
+    return $('//XCUIElementTypeButton[@name="Log Out"]');
   }
   get logoutCancelBtn() {
-    return $('//android.widget.Button[@resource-id="android:id/button2"]');
+    return $('//XCUIElementTypeButton[@name="Cancel"]');
+  }
+  get logoutOKbtn() {
+    return $("~OK");
   }
 
   // Message and Alert
   get alertSuccessLogout() {
-    return $('//android.widget.TextView[@resource-id="android:id/alertTitle"]');
+    return $('//XCUIElementTypeStaticText[@name="You are successfully logged out."]');
   }
 }
 

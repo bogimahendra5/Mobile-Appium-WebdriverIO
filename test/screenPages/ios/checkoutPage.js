@@ -1,3 +1,5 @@
+import keyboardPage from "./keyboardPage.js";
+
 class chceckoutPage {
   get fullnameField() {
     return $("~Full Name* input field");
@@ -26,17 +28,20 @@ class chceckoutPage {
   get securityCodeField() {
     return $("~Security Code* input field");
   }
+  get checkoutPaymentCardView() {
+    return $('//XCUIElementTypeOther[@name="checkout payment screen"]/XCUIElementTypeScrollView');
+  }
   get reviewOrderbtn() {
     return $("~Review Order button");
   }
-  get checkoutReviewOrderCard() {
-    return $('//android.widget.ScrollView[@content-desc="checkout review order screen"]/android.view.ViewGroup');
+  get checkoutReviewOrderTittle() {
+    return $("~Review your order");
   }
   get placeOrderBtn() {
     return $("~Place Order button");
   }
   get checkoutCompleteText() {
-    return $('//android.widget.TextView[@text="Checkout Complete"]');
+    return $("~Checkout Complete");
   }
   get continueShoppingBtn() {
     return $("~Continue Shopping button");
@@ -48,13 +53,16 @@ class chceckoutPage {
     await this.cityField.setValue(city);
     await this.zipCodeField.setValue(zipcode);
     await this.countryField.setValue(country);
+    await keyboardPage.ReturnBtn.click();
     await this.toPaymentBtn.click();
     await this.fullnameField.setValue(fullname);
     await this.cardNumberField.setValue(cardnumber);
     await this.expirationDate.setValue(expirationdate);
     await this.securityCodeField.setValue(securitycode);
+    await this.checkoutPaymentCardView.click();
     await this.reviewOrderbtn.click();
-    await expect(this.checkoutReviewOrderCard).toBeDisplayed();
+    await this.reviewOrderbtn.click();
+    await expect(this.checkoutReviewOrderTittle).toBeDisplayed();
     await this.placeOrderBtn.click();
   }
 }

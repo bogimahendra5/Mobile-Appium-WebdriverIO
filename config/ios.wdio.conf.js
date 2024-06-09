@@ -9,7 +9,7 @@ export const config = {
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  port: 4723,
+  port: 4724,
   //
   // ==================
   // Specify Test Files
@@ -62,6 +62,7 @@ export const config = {
       "appium:platformVersion": "16.2",
       "appium:automationName": "XCUItest",
       "appium:app": "/Users/bogimahendra/Project/Appium-WDIO/app/ios/MyRNDemoApp.app",
+      "appium:fullReset": "false",
       "appium:noReset": "false",
       "appium:forceAppLaunch": "true",
     },

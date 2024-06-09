@@ -1,9 +1,9 @@
 class productPage {
   get productTittle() {
-    return $('//android.widget.TextView[@text="Products"]');
+    return $('//XCUIElementTypeStaticText[@name="Products"]');
   }
-  get productCard() {
-    return $("//android.widget.ScrollView");
+  get productScrollBar() {
+    return $('//XCUIElementTypeOther[@name="Vertical scroll bar, 2 pages"]');
   }
 }
 export default new productPage();

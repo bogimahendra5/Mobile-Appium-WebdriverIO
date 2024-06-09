@@ -1,6 +1,6 @@
 class cartPage {
   get removeItemBtn() {
-    return $('//android.widget.TextView[@text="Remove Item"]');
+    return $("~remove item");
   }
   get proceedToCheckout() {
     return $("~Proceed To Checkout button");
